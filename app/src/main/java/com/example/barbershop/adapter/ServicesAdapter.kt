@@ -1,6 +1,7 @@
 package com.example.barbershop.adapter
 
 import android.content.Context
+import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.barbershop.databinding.ActivityHomeBinding
@@ -15,21 +16,22 @@ class ServicesAdapter(
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ServicesViewHolder {
-        TODO("Not yet implemented")
+        val listItem = ServicesItemBinding.inflate(LayoutInflater.from(context),parent,false)
+        return ServicesViewHolder(listItem)
     }
 
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
-    }
+    override fun getItemCount() = servicesList.size
+
 
     override fun onBindViewHolder(holder: ServicesViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.imgService.setImageResource(servicesList[position].img!!)
+        holder.txtService.text=servicesList[position].name
     }
 
     inner class ServicesViewHolder(binding: ServicesItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         val imgService = binding.imgService
-        val txtService = binding.
+        val txtService = binding.txtService
 
     }
 
