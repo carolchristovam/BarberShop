@@ -2,4 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="midnightblue">#2C3E50</color>
+    <color name="redapp">#E74C3C</color>
 </resources>
