@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.widget.SearchView
 import android.os.Message
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
@@ -35,6 +36,12 @@ class Home : AppCompatActivity() {
         recyclerViewServices.setHasFixedSize(true)
         recyclerViewServices.adapter=servicesAdapter
         getServices()
+
+        binding.btBook.setOnClickListener{
+            val intent=Intent(this,Scheduling::class.java)
+            intent.putExtra("name",name)
+            startActivity(intent)
+        }
 
     }
 
