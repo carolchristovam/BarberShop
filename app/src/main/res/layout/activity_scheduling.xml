@@ -1,68 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
+
+<LinearLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/midnightblue"
+    android:orientation="vertical"
     tools:context=".view.Scheduling">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Scheduling"
-        android:textSize="25sp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:gravity="center"
         android:layout_margin="40dp"
-        />
+        android:gravity="center"
+        android:text="Scheduling"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        app:cardBackgroundColor="@color/black"
-        >
+        app:cardBackgroundColor="@color/black">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Date"
-            android:textSize="18sp"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:gravity="center"
             android:layout_margin="10dp"
-            />
-        
+            android:gravity="center"
+            android:text="Date"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
     </androidx.cardview.widget.CardView>
-    
+
     <DatePicker
         android:id="@+id/datePicker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:calendarViewShown="false"
-        android:datePickerMode="spinner"
-        />
+        android:datePickerMode="spinner" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        app:cardBackgroundColor="@color/black"
-        >
+        app:cardBackgroundColor="@color/black">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Time"
-        android:textSize="18sp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_margin="10dp"
-        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="Time"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
     </androidx.cardview.widget.CardView>
 
     <TimePicker
@@ -70,6 +72,98 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:timePickerMode="spinner"/>
+        android:timePickerMode="spinner" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Choose someone"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/barber1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alexandre Dias"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/barber2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Daniel Mendes"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/barber3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rafael Lira"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btBook2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Book"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:backgroundTint="@color/redapp"
+        app:cornerRadius="15dp"
+        android:layout_margin="40dp"
+        />
+    
 </LinearLayout>
+</ScrollView>
