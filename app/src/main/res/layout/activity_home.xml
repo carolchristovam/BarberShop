@@ -67,7 +67,7 @@
                 android:layout_marginBottom="20dp"
                 android:backgroundTint="@color/redapp"
                 android:drawableEnd="@drawable/baseline_arrow_right_alt_24"
-                android:padding="15dp"
+                android:padding="10dp"
                 android:text="BOOK"
                 android:textSize="18sp"
                 android:textStyle="bold" />
